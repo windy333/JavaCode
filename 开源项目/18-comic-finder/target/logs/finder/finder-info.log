@@ -1,0 +1,43 @@
+2023-12-27 11:24:17,747 legion ./finder-5.1.0-runner.jar[2112] INFO  [io.quarkus] (main) finder 5.1.0 on JVM (powered by Quarkus 3.0.0.Alpha4) started in 0.986s. Listening on: http://0.0.0.0:7788
+2023-12-27 11:24:17,747 legion ./finder-5.1.0-runner.jar[2112] INFO  [io.quarkus] (main) Profile prod activated. 
+2023-12-27 11:24:17,747 legion ./finder-5.1.0-runner.jar[2112] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, vertx]
+2023-12-27 11:24:17,830 legion ./finder-5.1.0-runner.jar[2112] INFO  [io.git.jia.fin.run.ComicRunner] (main) 注意身体,适度看漫
+2023-12-27 11:24:17,831 legion ./finder-5.1.0-runner.jar[2112] INFO  [io.git.jia.fin.run.ComicRunner] (main) 后台模式
+2023-12-27 11:24:26,325 legion ./finder-5.1.0-runner.jar[2112] ERROR [io.git.jia.fin.ser.TaskService] (vert.x-eventloop-thread-7) 获取章节信息失败->解析漫画url/name/id为空,程序退出
+2023-12-27 11:24:26,325 legion ./finder-5.1.0-runner.jar[2112] INFO  [io.git.jia.fin.run.ComicRunner] (main) 前台模式
+2023-12-27 11:24:26,326 legion ./finder-5.1.0-runner.jar[2112] ERROR [io.qua.mut.run.MutinyInfrastructure] (vert.x-eventloop-thread-7) Mutiny had to drop the following exception: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:623)
+	at java.base/java.lang.Integer.parseInt(Integer.java:777)
+	at io.github.jiayaoO3O.finder.service.TaskService.processChapterInfo(TaskService.java:95)
+	at io.github.jiayaoO3O.finder.service.TaskService_ClientProxy.processChapterInfo(Unknown Source)
+	at io.github.jiayaoO3O.finder.service.ComicService.lambda$homePageConsumer$0(ComicService.java:48)
+	at io.smallrye.context.impl.wrappers.SlowContextualConsumer.accept(SlowContextualConsumer.java:21)
+	at io.smallrye.mutiny.helpers.UniCallbackSubscriber.onItem(UniCallbackSubscriber.java:73)
+	at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onItem(UniOperatorProcessor.java:47)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.onItem(UniOnItemTransformToUni.java:60)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromKnownItem$KnownItemSubscription.forward(UniCreateFromKnownItem.java:38)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromKnownItem.subscribe(UniCreateFromKnownItem.java:23)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.performInnerSubscription(UniOnItemTransformToUni.java:81)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.onItem(UniOnItemTransformToUni.java:57)
+	at io.smallrye.mutiny.vertx.AsyncResultUni.lambda$subscribe$1(AsyncResultUni.java:35)
+	at io.smallrye.mutiny.vertx.DelegatingHandler.handle(DelegatingHandler.java:25)
+	at io.vertx.ext.web.client.impl.HttpContext.handleDispatchResponse(HttpContext.java:397)
+	at io.vertx.ext.web.client.impl.HttpContext.execute(HttpContext.java:384)
+	at io.vertx.ext.web.client.impl.HttpContext.next(HttpContext.java:362)
+	at io.vertx.ext.web.client.impl.HttpContext.fire(HttpContext.java:329)
+	at io.vertx.ext.web.client.impl.HttpContext.dispatchResponse(HttpContext.java:291)
+	at io.vertx.ext.web.client.impl.HttpContext.lambda$null$7(HttpContext.java:507)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:264)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:246)
+	at io.vertx.core.impl.EventLoopContext.lambda$runOnContext$0(EventLoopContext.java:43)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2023-12-27 11:24:26,326 legion ./finder-5.1.0-runner.jar[2112] INFO  [io.git.jia.fin.run.ComicRunner] (main) 下载列表为空,终止任务

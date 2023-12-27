@@ -1,0 +1,7 @@
+io\github\jiayaoO3O\finder\entity\ChapterEntity.class
+io\github\jiayaoO3O\finder\service\TaskService.class
+io\github\jiayaoO3O\finder\runner\ComicRunner.class
+io\github\jiayaoO3O\finder\entity\PhotoEntity.class
+io\github\jiayaoO3O\finder\service\ComicService.class
+io\github\jiayaoO3O\finder\config\ComicConfig.class
+io\github\jiayaoO3O\finder\controller\ComicController.class

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="NiceCalendar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/NiceCalendar_exe/lib/NiceCalendar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
